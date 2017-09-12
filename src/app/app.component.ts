@@ -16,7 +16,8 @@ export class AppComponent {
 
 	onClickButton(){
 		this.btnClick = !this.btnClick;
-		this.clicks.push(this.count_click);
+		//this.clicks.push(this.count_click);
+		this.clicks.push(new Date());
 		this.count_click = this.count_click + 1;
 	}
 
