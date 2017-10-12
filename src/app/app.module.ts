@@ -1,26 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { ServerComponent } from './server/server.component';
-import { ServersComponent } from './servers/servers.component';
-import { WarningalertComponent } from './warningalert/warningalert.component';
-import { SuccessalertComponent } from './successalert/successalert.component';
+import { AccountComponent } from './account/account.component';
+import { NewAccountComponent } from './new-account/new-account.component';
+import {AccountService} from './account.service';
+import {LogginService} from './loggin.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ServerComponent,
-    ServersComponent,
-    WarningalertComponent,
-    SuccessalertComponent
+    AccountComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [AccountService, LogginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
